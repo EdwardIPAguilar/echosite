@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <style>
+      
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-background .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <div class="flex min-h-screen">
+            <div class="mx-auto max-w-6xl py-24 px-24 flex items-center justify-center flex-grow">
+                <div class="text-center px-10">
+                    <h1 class="text-6xl font-semibold tracking-tight shadow-sm text-white">Imagine A World<br>Without Deafness</h1>
+                    <p class="mt-6 leading-8 font-light text-gray-300">
+                        <span class="text-xl">The hearing aid was invented 125 years ago, with little innovation since. <b>Echo</b> is leveraging the cutting-edge of artificial intelligence and augmented reality to bring the deaf and hard of hearing a fundamentally new solution. Watch our unveiling on April 29th by signing up here:</span><br><br>
+                        <div class="inline-flex space-x-2"> <!-- Add this div -->
+                            <label for="email-address" class="sr-only">Email address</label>
+                            <input id="email-address" name="email" type="email" autocomplete="email" required class="text-lg min-w-0 flex-auto rounded-md border-0 bg-white px-3.5 py-3 shadow-md ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-lg sm:leading-6" placeholder="Enter your email">
+                            <button type="submit" id="rsvp-button" class="flex-none rounded-md bg-slate-900 hover:bg-slate-700 px-3.5 text-lg py-3 shadow-md focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold tracking-wide">RSVP</button>
+                        </div> <!-- End wrapping div -->
+                </div>
+            </div>
+    <!-- <div class="w-full mx-auto bg-white/10">
+        <div class="items-center flex mx-20 py-2 justify-between">
+            <span class="lg:text-lg sm:text-sm font-light text-white">εcho ™</span>
+            <span class="text-white lg:text-lg sm:text-sm  font-light">Built by humans in Chicago</span>
+            <span class="text-white lg:text-lg sm:text-sm  font-light"><u>About Echo</u></span>
+            <span class="text-white lg:text-lg sm:text-sm  font-light"><u>Contact</u></span>
+        </div>
+    </div> -->
+</div>
+
+    <!-- <script>
+
+        window.addEventListener("load", () => {
+            setTimeout(typeWriter, 1000); // Adjust this value to change the initial delay before typing starts
+        });
+        document.getElementById('rsvp-button').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+        const emailAddressInput = document.getElementById('email-address');
+        emailAddressInput.value = 'Welcome to Echo!'; // Clear the input field
+        });
+
+    </script> -->
+    
+</body>
+</html>
